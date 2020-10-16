@@ -1,18 +1,20 @@
 <html>
     <head>
         <script src="blogs.js"></script>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <div id="blogs">
+        <div class="blog-container" id="blogs">
 
         </div>
         <script>
             var blogContainer = document.getElementById('blogs');
             BLOGS.forEach(blog => {
-                var b = `
-                            <div> ${blog.title}</div>
+                var b = `<div class="blog">
+                            <div class="title"> ${blog.title}</div>
                             <img src="${blog.img}"/>
                             <div> ${blog.content}</div>
+                         </div>
                         `;
                 blogContainer.innerHTML += b;
             });
